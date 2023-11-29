@@ -23,7 +23,7 @@
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   //Read the data
-  d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/d3-heatmap/cdj_data2.csv").then(function (data) {
+  d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/d3-heatmap/cdj_data.csv").then(function (data) {
     // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
     const myGroups = Array.from(new Set(data.map(d => d.group)))
     const myVars = Array.from(new Set(data.map(d => d.variable)))
@@ -112,7 +112,7 @@
     .attr("y", -50)
     .attr("text-anchor", "left")
     .style("font-size", "22px")
-    .text("A d3.js heatmap");
+    .text("Heatmap of Personal & Ideal Traits");
 
   // Add subtitle to graph
   svg.append("text")
@@ -122,7 +122,7 @@
     .style("font-size", "14px")
     .style("fill", "grey")
     .style("max-width", 400)
-    .text("A short description of the take-away message of this chart.");
+    .text("Comparing personal and the ideal partner's traits.");
 
 
 </script>
