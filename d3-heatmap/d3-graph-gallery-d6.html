@@ -10,7 +10,7 @@
 <script>
 
   // set the dimensions and margins of the graph
-  const margin = { top: 80, right: 25, bottom: 30, left: 40 },
+  const margin = { top: 80, right: 25, bottom: 50, left: 100 },
     width = 450 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
 
@@ -51,7 +51,7 @@
 
     // Build color scale
     const myColor = d3.scaleSequential()
-      .interpolator(d3.interpolateInferno)
+      .interpolator(d3.interpolateRdPu)
       .domain([1, 100])
 
     // create a tooltip
