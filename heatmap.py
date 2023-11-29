@@ -8,7 +8,7 @@ df = pd.read_csv('cdj_dp - corr.csv')
 
 #filtered_df = df.drop(columns=['Max Air Temp (˚F)', 'Min Air Temp (˚F)'])
 corr = df.corr()
-plt.subplots(figsize = (14, 8))
+plt.subplots(figsize = (16, 8))
 
 #Plot a heatmap of the correlation matrix we created
 #sns.heatmap(corr, annot = True, cmap = 'YlGn')
