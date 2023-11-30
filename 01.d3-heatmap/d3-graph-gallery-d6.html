@@ -10,7 +10,7 @@
 <script>
 
   // set the dimensions and margins of the graph
-  const margin = { top: 80, right: 25, bottom: 50, left: 100 },
+  const margin = { top: 80, right: 25, bottom: 50, left: 120 },
     width = 450 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
 
@@ -23,7 +23,7 @@
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   //Read the data
-  d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/d3-heatmap/cdj_data_final2.csv").then(function (data) {
+  d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/01.d3-heatmap/cdj_data_final3.csv").then(function (data) {
     // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
     const myGroups = Array.from(new Set(data.map(d => d.group)))
     const myVars = Array.from(new Set(data.map(d => d.variable)))
