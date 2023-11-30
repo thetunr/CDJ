@@ -1,0 +1,81 @@
+group,variable,value
+Height,Height,4.9
+Height,Appearance,28
+Height,Intelligence,2.5
+Height,AthleticSocial Media,23
+Height,Humoror,8
+Height,Social Media,24
+Height,Personality,0.1
+Height,Political stance,33
+Appearance,Height,4.1
+Appearance,Appearance,2.4
+Appearance,Intelligence,2.8
+Appearance,AthleticSocial Media,2
+Appearance,Humoror,9.1
+Appearance,Social Media,12
+Appearance,Personality,5.8
+Appearance,Political stance,13
+Intelligence,Height,6.9
+Intelligence,Appearance,6
+Intelligence,Intelligence,4.4
+Intelligence,AthleticSocial Media,9.1
+Intelligence,Humoror,14
+Intelligence,Social Media,9.3
+Intelligence,Personality,14
+Intelligence,Political stance,2.5
+AthleticSocial Media,Height,9.8
+AthleticSocial Media,Appearance,12
+AthleticSocial Media,Intelligence,2.7
+AthleticSocial Media,AthleticSocial Media,39
+AthleticSocial Media,Humoror,1.4
+AthleticSocial Media,Social Media,10
+AthleticSocial Media,Personality,9.2
+AthleticSocial Media,Political stance,27
+Humoror,Height,2
+Humor,Appearance,2.9
+Humor,Intelligence,14
+Humor,AthleticSocial Media,16
+Humor,Humoror,33
+Humor,Social Media,3.7
+Humor,Personality,5
+Humor,Political stance,3.2
+Social Media Activity,Height,12
+Social Media Activity,Appearance,0.46
+Social Media Activity,Intelligence,9.1
+Social Media Activity,AthleticSocial Media,9.9
+Social Media Activity,Humoror,6.4
+Social Media Activity,Social Media,9.1
+Social Media Activity,Personality,17
+Social Media Activity,Political stance,7.8
+Patience,Height,0.91
+Patience,Appearance,0.3
+Patience,Intelligence,2.9
+Patience,AthleticSocial Media,0.79
+Patience,Humoror,6.5
+Patience,Social Media,7.2
+Patience,Personality,11
+Patience,Political stance,5.3
+Kindness,Height,5.1
+Kindness,Appearance,8.9
+Kindness,Intelligence,16
+Kindness,AthleticSocial Media,6.8
+Kindness,Humoror,4.5
+Kindness,Social Media,12
+Kindness,Personality,13
+Kindness,Political stance,16
+Introverted / Extroverted,Height,4.1
+Introverted / Extroverted,Appearance,12
+Introverted / Extroverted,Intelligence,5.9
+Introverted / Extroverted,AthleticSocial Media,2.2
+Introverted / Extroverted,Humoror,1.6
+Introverted / Extroverted,Social Media,15
+Introverted / Extroverted,Personality,4.8
+Introverted / Extroverted,Political stance,1.1
+Thinker / Feeler,Height,6.7
+Thinker / Feeler,Appearance,6
+Thinker / Feeler,Intelligence,3.3
+Thinker / Feeler,AthleticSocial Media,18
+Thinker / Feeler,Humoror,0.22
+Thinker / Feeler,Social Media,3.3
+Thinker / Feeler,Personality,6.9
+Thinker / Feeler,Political stance,12
