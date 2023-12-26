@@ -1,3 +1,5 @@
+<!-- Source: https://d3-graph-gallery.com/heatmap.html -->
+
 <!DOCTYPE html>
 <meta charset="utf-8">
 
@@ -8,7 +10,6 @@
     }
   </style>
 
-  <!-- Load d3.js -->
   <script src="https://d3js.org/d3.v6.js"></script>
 
 </head>
@@ -19,12 +20,12 @@
 
   <script>
 
-    // set the dimensions and margins of the graph
+    // Set the dimensions and margins of the graph
     const margin = { top: 80, right: 25, bottom: 200, left: 150 },
       width = 500 - margin.left - margin.right,
       height = 550 - margin.top - margin.bottom;
 
-    // append the svg object to the body of the page
+    // Append the svg object to the body of the page
     const svg = d3.select("#my_dataviz")
       .append("svg")
       .attr("width", width + margin.left + margin.right)
@@ -32,19 +33,14 @@
       .append("g")
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    //Read the data
-    d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/01.d3-heatmap/cdj_data_final.csv").then(function (data) {
-      // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
+    // Read the data
+    d3.csv("https://raw.githubusercontent.com/thetunr/CDJ/main/d3-heatmap/cdj_data_final.csv").then(function (data) {
 
-      console.log(data);
+      // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
       let myGroups = Array.from(new Set(data.map(d => d.group)))
       const myVars = Array.from(new Set(data.map(d => d.variable)))
 
-      console.log(myGroups);
-
-
       // Build X scales and axis:
-
       const axis = d3.select("svg").append("g").attr("transform", "translate(" + margin.left + "," + 390 + ")");
 
       const x = d3.scaleBand()
@@ -61,7 +57,6 @@
 
       axis.selectAll("path,line").remove();
 
-
       // Build Y scales and axis:
       const y = d3.scaleBand()
         .range([height, 0])
@@ -73,13 +68,13 @@
         .select(".domain").remove()
 
       const valExtent = d3.extent(data, d => d['value'])
+
       // Build color scale
       const myColor = d3.scaleSequential()
-
         .domain(valExtent)
         .range(["#CDB4DB", "#FFC8DD", "#FFAFCC", "#BDE0FE", "#A2D2FF"])
 
-      // create a tooltip
+      // Create a tooltip
       const tooltip = d3.select("#my_dataviz")
         .append("div")
         .style("opacity", 0)
@@ -92,7 +87,6 @@
 
       // Three function that change the tooltip when user hover / move / leave a cell
       const mouseover = function (event, d) {
-        console.log(d3.select(this)._groups[0][0].__data__.value)
         tooltip.style("opacity", 1);
         d3.select(this)
           .style("stroke", "black")
@@ -116,9 +110,8 @@
 
       const vis = d3.select("svg").append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      // add the squares
+      // Add the squares
       vis.selectAll()
-
         .data(data, function (d) { return d.group + ':' + d.variable; })
         .join("rect")
         .attr("x", function (d) { return x(d.group) })
