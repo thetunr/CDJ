@@ -10,7 +10,7 @@
 <script>
 
   // set the dimensions and margins of the graph
-  const margin = { top: 80, right: 25, bottom: 50, left: 120 },
+  const margin = { top: 80, right: 25, bottom: 30, left: 40 },
     width = 450 - margin.left - margin.right,
     height = 450 - margin.top - margin.bottom;
 
@@ -23,7 +23,8 @@
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
   //Read the data
-  d3.csv("https://raw.githubusercontent.com/thetunr/cdj/main/01.d3-heatmap/cdj_data_final3.csv").then(function (data) {
+  //"https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv"
+  d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv").then(function (data) {
     // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
     const myGroups = Array.from(new Set(data.map(d => d.group)))
     const myVars = Array.from(new Set(data.map(d => d.variable)))
@@ -51,7 +52,7 @@
 
     // Build color scale
     const myColor = d3.scaleSequential()
-      .interpolator(d3.interpolateRdPu)
+      .interpolator(d3.interpolateInferno)
       .domain([1, 100])
 
     // create a tooltip
@@ -112,7 +113,7 @@
     .attr("y", -50)
     .attr("text-anchor", "left")
     .style("font-size", "22px")
-    .text("Heatmap of Personal & Ideal Traits");
+    .text("A d3.js heatmap");
 
   // Add subtitle to graph
   svg.append("text")
@@ -122,7 +123,7 @@
     .style("font-size", "14px")
     .style("fill", "grey")
     .style("max-width", 400)
-    .text("Comparing personal and the ideal partner's traits.");
+    .text("A short description of the take-away message of this chart.");
 
 
 </script>

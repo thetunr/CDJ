@@ -1,6 +1,1 @@
-# cdj
-# cdj
-# cdj
-# cdj
-# cdj
-# cdj
+# Cornell Data Journal: Dating Preferences Project
